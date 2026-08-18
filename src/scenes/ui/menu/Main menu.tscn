@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bha0ajeho2b8q"]
+[gd_scene format=3 uid="uid://bha0ajeho2b8q"]
 
-[ext_resource type="Script" path="res://src/scenes/ui/menu/Main menu.gd" id="1_qyhnx"]
+[ext_resource type="Script" uid="uid://bksp50whw7i05" path="res://src/scenes/ui/menu/Main menu.gd" id="1_qyhnx"]
 [ext_resource type="Texture2D" uid="uid://b01f2drypp3a6" path="res://assets/environment/backgrounds/background1.png" id="2_yg26a"]
 [ext_resource type="Texture2D" uid="uid://daf8xgvps0c6y" path="res://assets/environment/backgrounds/background2.png" id="3_4bu58"]
 [ext_resource type="Texture2D" uid="uid://mewbkbieilpw" path="res://assets/environment/backgrounds/background3.png" id="4_62261"]
@@ -8,60 +8,60 @@
 [sub_resource type="LabelSettings" id="LabelSettings_470wt"]
 font_size = 20
 
-[node name="Main menu" type="Node2D"]
+[node name="Main menu" type="Node2D" unique_id=300809339]
 script = ExtResource("1_qyhnx")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=2065474910]
 
-[node name="Background1" type="Sprite2D" parent="CanvasGroup"]
+[node name="Background1" type="Sprite2D" parent="CanvasGroup" unique_id=147933271]
 position = Vector2(157, 94)
 scale = Vector2(0.528125, 0.278125)
 texture = ExtResource("2_yg26a")
 
-[node name="Background2" type="Sprite2D" parent="CanvasGroup"]
+[node name="Background2" type="Sprite2D" parent="CanvasGroup" unique_id=1326240708]
 position = Vector2(157, 93)
 scale = Vector2(0.53125, 0.278125)
 texture = ExtResource("3_4bu58")
 
-[node name="Background3" type="Sprite2D" parent="CanvasGroup"]
+[node name="Background3" type="Sprite2D" parent="CanvasGroup" unique_id=365133398]
 position = Vector2(157, 95.875)
 scale = Vector2(0.528125, 0.284766)
 texture = ExtResource("4_62261")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1516431640]
 offset_left = 2.0
 offset_right = 321.0
 offset_bottom = 59.0
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=395259605]
 layout_mode = 2
 text = "Mountain Clinbing"
 label_settings = SubResource("LabelSettings_470wt")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1877606287]
 offset_top = 157.0
 offset_right = 319.0
 offset_bottom = 179.0
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="Play" type="Button" parent="HBoxContainer2"]
+[node name="Play" type="Button" parent="HBoxContainer2" unique_id=796107720]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
 button_mask = 3
 text = "Play"
 
-[node name="Settings" type="Button" parent="HBoxContainer2"]
+[node name="Settings" type="Button" parent="HBoxContainer2" unique_id=604345380]
 layout_mode = 2
 focus_mode = 1
 theme_override_font_sizes/font_size = 10
 action_mode = 0
 text = "Settings"
 
-[node name="Quit" type="Button" parent="HBoxContainer2"]
+[node name="Quit" type="Button" parent="HBoxContainer2" unique_id=1628901848]
 layout_mode = 2
 focus_mode = 1
 theme_override_font_sizes/font_size = 10

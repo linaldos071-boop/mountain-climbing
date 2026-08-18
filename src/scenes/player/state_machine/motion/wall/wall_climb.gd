@@ -61,5 +61,3 @@ func climb_on_ledge(delta):
 
 func on_fatigue_knockback(_direction: Vector2, _power: float):
 	state_finished.emit("Fall", {})
-
-
