@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://qqbchvllsyu8" path="res://assets/tilesets/8x8_nature.png" id="3_a8bl4"]
 [ext_resource type="PackedScene" uid="uid://ceu7ayosarjew" path="res://src/scenes/environment/hazard/spike.tscn" id="3_x7lsv"]
 [ext_resource type="Texture2D" uid="uid://bgdw7gy5w7uwg" path="res://assets/tilesets/Textures-16.png" id="4_7ptbi"]
-[ext_resource type="Script" uid="uid://csoxe70xo0kxy" path="res://src/scenes/levels/Level tutorial/sprite_2d.gd" id="6_nvl0o"]
+[ext_resource type="PackedScene" uid="uid://bte6piwln68cd" path="res://assets/obj/Objeto.tscn" id="6_cqqb7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ys4rg"]
 texture = ExtResource("2_cqqb7")
@@ -73,8 +73,6 @@ texture_region_size = Vector2i(8, 8)
 2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 3:10/0 = 0
 3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
-0:11/0 = 0
-0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 1:11/0 = 0
 1:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 2:11/0 = 0
@@ -330,6 +328,8 @@ texture_region_size = Vector2i(8, 8)
 9:20/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 5:21/0 = 0
 5:22/0 = 0
+0:11/0 = 0
+0:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enlxi"]
 texture = ExtResource("3_a8bl4")
@@ -1213,7 +1213,9 @@ size = Vector2(107, 108)
 [node name="Level Tuto" type="Node2D" unique_id=1260461976]
 
 [node name="Alys" parent="." unique_id=2136740989 instance=ExtResource("1_dq2ha")]
-position = Vector2(160, 128)
+position = Vector2(515, 60)
+collision_layer = 544
+collision_mask = 513
 
 [node name="TileMap" type="Node2D" parent="." unique_id=1579674185]
 position = Vector2(8, -1)
@@ -1351,16 +1353,38 @@ label_settings = SubResource("LabelSettings_gjpdv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=309087237]
-position = Vector2(476, 30)
-script = ExtResource("6_nvl0o")
+[node name="Area2D" type="Area2D" parent="." unique_id=1237609104]
+position = Vector2(477, 43)
+collision_layer = 1568
+collision_mask = 1568
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1237609104]
-collision_layer = 32
-collision_mask = 32
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1858097617]
-position = Vector2(43.5, 44)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1858097617]
+light_mask = 1537
+visibility_layer = 1537
+z_index = 11
+position = Vector2(38, 39)
 shape = SubResource("RectangleShape2D_8y0su")
 
-[connection signal="area_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_area_entered"]
+[node name="Objeto" parent="." unique_id=1241637103 instance=ExtResource("6_cqqb7")]
+position = Vector2(595, 112)
+
+[node name="Objeto2" parent="." unique_id=522804271 instance=ExtResource("6_cqqb7")]
+position = Vector2(1100, 107)
+
+[node name="Objeto3" parent="." unique_id=23974792 instance=ExtResource("6_cqqb7")]
+position = Vector2(1108, 107)
+
+[node name="Objeto4" parent="." unique_id=143539035 instance=ExtResource("6_cqqb7")]
+position = Vector2(1116, 107)
+
+[node name="Objeto5" parent="." unique_id=386189254 instance=ExtResource("6_cqqb7")]
+position = Vector2(1124, 107)
+
+[node name="Objeto6" parent="." unique_id=722144805 instance=ExtResource("6_cqqb7")]
+position = Vector2(1132, 107)
+
+[node name="Objeto7" parent="." unique_id=1545563857 instance=ExtResource("6_cqqb7")]
+position = Vector2(1140, 107)
+
+[node name="Objeto8" parent="." unique_id=1213026019 instance=ExtResource("6_cqqb7")]
+position = Vector2(1148, 107)

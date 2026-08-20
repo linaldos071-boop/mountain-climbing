@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b01f2drypp3a6" path="res://assets/environment/backgrounds/background1.png" id="2_yg26a"]
 [ext_resource type="Texture2D" uid="uid://daf8xgvps0c6y" path="res://assets/environment/backgrounds/background2.png" id="3_4bu58"]
 [ext_resource type="Texture2D" uid="uid://mewbkbieilpw" path="res://assets/environment/backgrounds/background3.png" id="4_62261"]
+[ext_resource type="AudioStream" uid="uid://bb3sotmgaj5t7" path="res://assets/Áudio/Chill Swing Piano Music For Videos - Gotta Go by Tokyo Music Wal.mp3" id="5_ncxqe"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_470wt"]
 font_size = 20
@@ -67,5 +68,9 @@ focus_mode = 1
 theme_override_font_sizes/font_size = 10
 action_mode = 0
 text = "Quit "
+
+[node name="ChillSwingPianoMusicForVideosGottaGoByTokyoMusicWal" type="AudioStreamPlayer" parent="." unique_id=1663562581]
+stream = ExtResource("5_ncxqe")
+autoplay = true
 
 [connection signal="pressed" from="HBoxContainer2/Play" to="." method="_on_play_pressed"]
